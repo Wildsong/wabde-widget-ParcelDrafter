@@ -132,14 +132,12 @@ define([
         //if entered value is number set it
         if (!isNaN(Number(scaleValue))) {
           this.scaleTxt.set("value", Number(scaleValue));
-          this.scaleTxt.set("value", Number(this.scaleTxt.displayedValue));
         }
         //check if value entered is valid then set the scaling else keep the previous value
         if (this.scaleTxt.isValid()) {
           this.scaleGeometries();
         } else {
           this.scaleTxt.set("value", Number(lastValue));
-          this.scaleTxt.set("value", Number(this.scaleTxt.displayedValue));
         }
       },
 
@@ -166,14 +164,12 @@ define([
         //if entered value is number set it
         if (!isNaN(Number(rotationAngle))) {
           this.rotationTxt.set("value", Number(rotationAngle));
-          this.rotationTxt.set("value", Number(this.rotationTxt.displayedValue));
         }
         //check if value enterd is valid then set the rotation else keep the previous value
         if (this.rotationTxt.isValid()) {
           this.rotateGeometries();
         } else {
           this.rotationTxt.set("value", Number(lastValue));
-          this.rotationTxt.set("value", Number(this.rotationTxt.displayedValue));
         }
       },
 
